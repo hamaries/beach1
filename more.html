@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+  <style type="text/tailwindcss">
+    .navbar-fixed {
+      @apply fixed z-[9999];
+      @apply shadow-md bg-white;
+      /* backdrop-filter: blur(5px); */
+    }
+    .show {
+      display: block;
+    }
+    .hamburger-line {
+      @apply w-[30px] h-[2px] my-2 block;
+    }
+    .hamburger-active > span:nth-child(1) {
+      @apply origin-top-left rotate-45 transition-all duration-300;
+    }
+    .hamburger-active > span:nth-child(2) {
+      @apply scale-0 transition-all duration-300;
+    }
+    .hamburger-active > span:nth-child(3) {
+      @apply origin-bottom-left -rotate-45 transition-all duration-300;
+    }
+
+    #toggle:checked ~ label .wadah_circle .circle {
+      @apply translate-x-8;
+      @apply bg-white;
+    }
+    #toggle:checked ~ label .wadah_circle {
+      @apply bg-slate-700;
+    }
+    .dark {
+      @apply dark:bg-slate-900 dark:text-slate-200;
+    }
+    .text-primary {
+      color: #5e17eb;
+    }
+    .bg-primary {
+      background: #5e17eb;
+    }
+    .text-secondary {
+      color: #f65d2c;
+    }
+    .bg-secondary {
+      background: #f65d2c;
+    }
+  </style>
+</head>
+<body>
+   <!-- navbar -->
+   <header class="absolute top-0 left-0 w-full  items-center flex z-10 py-4 bg-white">
+    <div class="container mx-auto px-5">
+      <div class="flex items-center justify-between relative">
+        <h2 class="font-bold text-blue-900 text-xl uppercase ">moksha <span class="border-r-2 border-blue-900 "></span> <span class="text-sm font-thin pl-2 ">pradana </span></h2>
+        <div class="flex items-center">
+         <button
+           id="hamburger"
+           name="hamburger"
+           type="button"
+           class="absolut md:hidden"
+         >
+           <span class="hamburger-line bg-black"></span>
+           <span class="hamburger-line bg-black"></span>
+           <span class="hamburger-line bg-black"></span>
+         </button>
+         <nav id="nav-menu"  class="hidden md:flex absolute md:static md:bg-transparent md:max-w-full md:shadow-none  bg-white shadow-lg rounded-lg max-w-[250px] w-full right-0 top-full overflow-hidden ">
+         <ul class="block md:flex">
+         <li class="px-3 group hover:bg-blue-800 rounded-lg py-2 hover:text-white font-bold">
+           <a href="/" class="flex">Home</a>
+         </li>
+         
+         <li class="px-3 group hover:bg-blue-800 py-2 hover:text-white rounded-lg font-bold">
+           <a href="../#About">About</a>
+         </li>
+         <li class="px-3 group hover:bg-blue-800 py-2 hover:text-white rounded-lg font-bold">
+           <a href="../#contac">Programs</a>
+         </li>
+         </ul>
+       </nav>
+      </div>
+    </div>
+       </header>
+       <!-- navbar -->
+  <!-- about -->
+  <section >
+    <div class="w-full h-[450px]  bg-no-repeat bg-cover relative bg-center " style="background-image: url(img/c.jpg);">
+      <div class="top-0 bottom-0 right-0 left-0 bg-black absolute bg-opacity-40">
+        </div>
+        <div class="absolute z-20 bottom-20 mx-28">
+          <h2 class="text-white uppercase font-thin py-1 text-5xl ">more</h2>
+          
+          <h3 class=" text-5xl text-white uppercase font-bold"><span class="border-b-2">a</span>bout us</h3>        
+        </div>       
+    </div>
+  </section>
+   <!-- about -->
+    <!-- title -->
+     <section class="pt-20 pb-20 bg-slate-200">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap mx-10 xl:mx-32">
+          <p class="pb-2 ">Lorem ipsum dolor Lorem ipsum
+             dolor sit amet consectetur adipisicing elit
+             . Reprehenderit, earum! sit amet consectetur
+              adipisicing elit. Corrupti Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, quaerat? saepe voluptatum quidem 
+              ab, veniam delectus nostrum ullam. Officiis,
+               corporis exercitationem!</p>
+               <p class="pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium
+                 quod autem aperiam quam dolorum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, explicabo! labore temporibus error totam libero.</p>
+               <p class="pb-16">Lorem, ipsum dolor sit amet consectetur Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, hic! adipisicing elit. Eaque vero minus repellendus
+                   nostrum, exercitationem odit neque iusto consectetur adipisci in!</p>                
+                    <img src="img/4.jpg" alt="Contoh Gambar" class="w-full">                            
+         </div>        
+       </div>
+     </section>
+     <!-- title -->
+     <footer>
+      <div class="mx-auto py-4 px-20 flex flex-wrap justify-between ">
+        <h1 class=" text-xs font-semibold pb-2  text-black uppercase ">all right reserved</h1>
+        <h1 class=" text-xs font-semibold pb-2  text-black uppercase ">@2024 moksa pradana</h1>
+        <h1 class=" text-xs font-semibold pb-2  text-black uppercase ">part of adhya group</h1>
+          
+    </div>
+     </footer>
+    <script src="script.js"></script>
+</body>
+</html>
